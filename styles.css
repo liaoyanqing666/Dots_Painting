@@ -19,8 +19,8 @@ body {
 }
 
 .main-container {
-    width: 90%;
-    max-width: 1000px;
+    width: 80%;
+    max-width: 2000px;
     margin: 20px 0;
     display: flex;
     flex-direction: column;
@@ -57,11 +57,19 @@ body {
 
 .controls {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
     margin: 20px 0;
     flex-wrap: wrap;
     align-items: center;
+    background-color: #eef3f6;
+    padding: 10px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    
 }
 
 .option-group {
@@ -85,17 +93,36 @@ body {
     width: 120px;
 }
 
+#copyButton{
+    background-color: #5b8db8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
 textarea {
-    width: 100%;
+    width: 80%;
     height: 500px;
     font-size: 5px;
     font-family: 'Courier New', Courier, monospace;
     padding: 10px;
-    border: 1px #ccc;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    resize: vertical;
+    resize: both;
     white-space: pre;
     overflow: auto;
+    text-align: center;
+}
+
+textarea::placeholder {
+    color: #888;
+    text-align: center;
+    font-size: 15px;
 }
 
 #footer {
@@ -117,6 +144,14 @@ textarea {
     text-decoration: underline;
 }
 
+#imagePreview {
+    height: 100%;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    display: block;
+}
+
 @media (max-width: 768px) {
     #title {
         font-size: 28px;
@@ -136,4 +171,3 @@ textarea {
         font-size: 12px;
     }
 }
-
