@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Dots Painting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="title">🖼️ Image to Dots Painting</div>
+    
+    <div class="main-container">
+        <div id="uploadSection" class="upload-container">
+            <input type="file" id="imageInput" accept="image/*" hidden>
+            <div id="dropZone" class="drop-zone">
+                <span class="upload-text">Drag & Drop Image or Click to Upload</span>
+            </div>
+            <div class="resolution-display" id="resolutionDisplay"></div>
+        </div>
+
+        <div class="controls">
+            <div class="option-group">
+                <label for="widthInput">Output Width:</label>
+                <input type="number" id="widthInput" min="1" value="100">
+            </div>
+            <div class="option-group">
+                <label for="heightInput">Output Height:</label>
+                <input type="number" id="heightInput" min="1" value="50">
+            </div>
+            <div class="option-group">
+                <label for="fontSize">Font Size:</label>
+                <input type="range" id="fontSize" min="12" max="40" value="20">
+                <input type="number" id="fontSizeInput" value="12" min="12" max="40">
+            </div>
+            <div class="option-group">
+                <label for="styleSelect">Style:</label>
+                <select id="styleSelect">
+                    <option value="dots">Dots (.)</option>
+                    <option value="braille">Braille (⣇)</option>
+                    <option value="square">Square (▙)</option>
+                </select>
+            </div>
+            <div class="option-group">
+                <label for="threshold">Threshold:</label>
+                <input type="range" id="threshold" min="0" max="255" step="1" value="128">
+                <span id="thresholdValue">128</span>
+            </div>
+        </div>
+        <textarea id="outputText" readonly></textarea>
+    </div>
+
+    <div id="footer">
+        Converter repository: <a href="https://github.com/liaoyanqing666/Dots_Painting" target="_blank">https://github.com/liaoyanqing666/Dots_Painting</a><br>
+        Created by: <a href="https://github.com/liaoyanqing666" target="_blank">liaoyanqing666</a>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

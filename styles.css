@@ -1,0 +1,139 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #5b8db8;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.main-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.upload-container {
+    background-color: #ffffff;
+    border: 2px dashed #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+    width: 50%;
+}
+
+.drop-zone {
+    padding: 40px;
+    cursor: pointer;
+}
+
+.upload-text {
+    color: #666;
+    font-size: 18px;
+}
+
+.resolution-display {
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.option-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option-group input[type="number"], .option-group input[type="range"], .option-group select {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.option-group input[type="range"] {
+    width: 120px;
+}
+
+.option-group select {
+    width: 120px;
+}
+
+textarea {
+    width: 100%;
+    height: 500px;
+    font-size: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border: 1px #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    white-space: pre;
+    overflow: auto;
+}
+
+#footer {
+    margin-top: auto;
+    padding: 40px 0 20px;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    width: 90%;
+}
+
+#footer a {
+    color: #5b8db8;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #3c6e91;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #title {
+        font-size: 28px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .output-container textarea {
+        font-size: 12px;
+    }
+}
+
