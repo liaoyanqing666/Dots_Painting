@@ -118,14 +118,16 @@ document.addEventListener("DOMContentLoaded", function() {
         return result;
     }
 
+    // Braille encoding is divided into two types: six-point ⠿ and eight-point ⣿. Among them, six-point is encoded in binary according to the method of from top to bottom and from left to right. Eight-point adds two points at the bottom of six-point, and the encoding method is to encode the first six points first, and then encode the last two points from left to right. Therefore, for the convenience of the code, only the Braille encoding of six points is temporarily implemented.
+    // Reference: https://www.compart.com/en/unicode/block/U+2800
     function processBraille(imageData, threshold) {
         let result = "";
         const data = imageData.data;
-        for (let y = 0; y < imageData.height; y += 4) {
+        for (let y = 0; y < imageData.height; y += 3) {
             let line = "";
             for (let x = 0; x < imageData.width; x += 2) {
                 let bits = 0;
-                for (let dy = 0; dy < 4; dy++) {
+                for (let dy = 0; dy < 3; dy++) {
                     for (let dx = 0; dx < 2; dx++) {
                         const px = x + dx;
                         const py = y + dy;

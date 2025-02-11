@@ -10,7 +10,7 @@ This README is writen in both **English and Chinese**.
 This project aims to convert images into dots painting in different styles. It supports two main styles: Dot and Braille. Users can upload an image, then select a style, adjust the threshold, and generate the corresponding dots painting.
 
 1. **Dot Style**: Uses `.` and spaces to represent the image's grayscale values.
-2. **Braille Style**: Converts each pixel and its surrounding pixels into Braille characters (⣇ ⠃).
+2. **Braille Style**: Converts each pixel and its surrounding pixels into Braille characters (⠽ ⠃).
 
 Users can also adjust the output width, height, font size, and threshold to fine-tune the appearance of the dots painting.
 
