@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const styleSelect = document.getElementById("styleSelect");
     const thresholdSlider = document.getElementById("threshold");
     const thresholdValue = document.getElementById("thresholdValue");
-    const imagePreview = document.getElementById("imagePreview");
     const copyButton = document.getElementById("copyButton");
 
     let image = new Image();
@@ -44,8 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
             image.onload = function() {
                 resolutionDisplay.textContent = `Resolution: ${image.width}x${image.height}`;
                 generateAsciiArt();
-                imagePreview.style.display = 'block';
-                imagePreview.src = e.target.result;
             };
             image.src = e.target.result;
         };
